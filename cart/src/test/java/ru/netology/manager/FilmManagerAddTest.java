@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.PurchaseItem;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FilmManagerAddTest {
     private ru.netology.manager.FilmManager filmManager = new ru.netology.manager.FilmManager();
@@ -48,6 +48,7 @@ public class FilmManagerAddTest {
 
     @Test
     public void shouldAddMoreTenFilm(){
+        filmManager.add(fourth);
         filmManager.add(fifth);
         filmManager.add(sixth);
         filmManager.add(seventh);

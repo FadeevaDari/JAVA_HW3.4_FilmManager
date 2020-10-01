@@ -10,17 +10,14 @@ public class FilmManager {
         this.filmLength = filmLength;
     }
 
-    public FilmManager() {
-    }
+    public FilmManager() {}
 
 
     public void add(PurchaseItem item) {
         // создаём новый массив размером на единицу больше
         int length = items.length + 1;
         PurchaseItem[] tmp = new PurchaseItem[length];
-
         // копируем поэлементно
-
         System.arraycopy(items, 0, tmp, 0, items.length);
         // кладём последним наш элемент
         int lastIndex = tmp.length - 1;
@@ -30,7 +27,7 @@ public class FilmManager {
 
     public PurchaseItem[] getAll() {
         int resultLength = Math.min(filmLength, items.length);
-        PurchaseItem[] result = new PurchaseItem[items.length];
+        PurchaseItem[] result = new PurchaseItem[resultLength];
         // перебираем массив в прямом порядке
         // но кладём в результаты в обратном
         for (int i = 0; i < result.length; i++) {
