@@ -51,7 +51,7 @@
                 <version>2.22.2</version>
 
                 <configuration>
-                    <failIfNoTests>true</failIfNoTests>
+                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
 
