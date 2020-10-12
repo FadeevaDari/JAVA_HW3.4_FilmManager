@@ -40,22 +40,7 @@ class FilmRepositoryTest {
         assertArrayEquals(expected, actual);
     }
 
-    @Test
-    public void shouldFindByIdExisting() {
-        int findId = 3;
-        PurchaseItem actual = filmRepository.findById(findId);
-        PurchaseItem expected = third;
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldRemoveByIdNotExisting() {
-        int findId = 4;
-        PurchaseItem actual = filmRepository.findById(findId);
-
-        assertEquals(null, actual);
-    }
+    
 
     @Test
     public void shouldRemoveAll() {
